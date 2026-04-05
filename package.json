@@ -1,0 +1,64 @@
+{
+  "name": "veloxis",
+  "version": "1.0.0",
+  "description": "Ultra-fast, modular HTTP & GraphQL client for Node.js and Browser.",
+  "type": "module",
+  "main": "./dist/index.cjs",
+  "module": "./dist/index.js",
+  "types": "./dist/index.d.ts",
+  "exports": {
+    ".": {
+      "import": "./dist/index.js",
+      "require": "./dist/index.cjs",
+      "types": "./dist/index.d.ts"
+    },
+    "./plugins/*": {
+      "import": "./dist/plugins/*.js",
+      "types": "./dist/plugins/*.d.ts"
+    }
+  },
+  "files": [
+    "dist",
+    "README.md",
+    "LICENSE"
+  ],
+  "scripts": {
+    "dev": "bun run --watch src/index.ts",
+    "build": "bun run build.ts && tsc --emitDeclarationOnly",
+    "test": "bun test",
+    "lint": "bun x eslint src/**/*.ts",
+    "bench": "bun run benchmarks/*.bench.ts",
+    "prepublishOnly": "bun run test && bun run build",
+    "release": "npm version patch && git push --follow-tags"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/AngelitoSystems/Veloxis.git"
+  },
+  "homepage": "https://github.com/AngelitoSystems/Veloxis#readme",
+  "bugs": {
+    "url": "https://github.com/AngelitoSystems/Veloxis/issues"
+  },
+  "keywords": [
+    "http",
+    "fetch",
+    "graphql",
+    "client",
+    "axios",
+    "rest",
+    "typescript",
+    "performance",
+    "bun"
+  ],
+  "author": "AngelitoSystems",
+  "license": "MIT",
+  "publishConfig": {
+    "access": "public",
+    "provenance": true
+  },
+  "devDependencies": {
+    "@types/bun": "latest",
+    "typescript": "^5.0.0",
+    "mitata": "latest"
+  }
+}
