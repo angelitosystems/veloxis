@@ -29,4 +29,6 @@ jobs:
         run: bun run build
 
       - name: Publish to npm (OIDC)
-        run: npm publish --access public
+        run: npm publish --access public --provenance
+        env:
+          NODE_AUTH_TOKEN: ${{ secrets.GITHUB_TOKEN }} # No es un token de npm, es para que el comando sepa que está autenticado en el entorno CI
