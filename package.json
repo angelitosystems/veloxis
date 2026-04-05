@@ -1,6 +1,6 @@
 {
   "name": "veloxis",
-  "version": "1.0.1",
+  "version": "1.0.2",
   "description": "Ultra-fast, modular HTTP & GraphQL client for Node.js and Browser.",
   "type": "module",
   "main": "./dist/index.cjs",
