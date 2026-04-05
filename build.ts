@@ -20,7 +20,7 @@ async function runBuild() {
     format: 'esm',
     target: 'browser',
     minify: true,
-    sourcemap: 'external',
+    sourcemap: 'none',
   });
 
   // Build CJS (Renaming to .cjs)

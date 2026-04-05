@@ -53,8 +53,7 @@
   "author": "AngelitoSystems",
   "license": "MIT",
   "publishConfig": {
-    "access": "public",
-    "provenance": true
+    "access": "public"
   },
   "devDependencies": {
     "@types/bun": "latest",
